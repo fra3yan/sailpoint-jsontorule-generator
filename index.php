@@ -1,5 +1,5 @@
 <?php
-$json_file = file_get_contents('C:\temp\branch.json');  // where you put json file
+$json_file = file_get_contents('C:\temp\Get_division-1702540999546.json');  // where you put json file
 $json_data = json_decode($json_file);
 $error = json_last_error();
 
@@ -25,7 +25,7 @@ header("Content-Type: text/plain");
 
 
 
-$getAttribute = 'location_code';
+$getAttribute = 'division_name';
 echo '
 import sailpoint.object.Identity;
 import sailpoint.object.Link;
@@ -44,8 +44,8 @@ if (getAttribute!=null) {
 foreach ($json_data->data as $key => $value) {
 
 echo '
-    case "'.$value->branch_code.'":
-    val = "'.$value->branch_id.'";
+    case "'.$value->division_name.'":
+    val = "'.$value->division_id.'";
     return val;
     break;
 ';
