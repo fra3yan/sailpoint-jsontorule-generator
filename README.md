@@ -1,0 +1,2 @@
+# sailpoint-jsontorule-generator
+ 
